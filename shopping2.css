@@ -1,0 +1,246 @@
+header h1 {
+	font-size: 60px;
+	/*margin-left: auto;
+	margin-right: auto;*/
+	text-align: center;
+	margin-left: -18px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-family: helvetica;
+}
+
+header #underline {
+	background-color: black;
+	height: 8px;
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+/*ADDING GROCERY ITEMS*/
+
+#grocery {
+	position: relative;
+	background-color: #ededed;
+	border: 4px solid black;
+	border-radius: 10px;
+	height: 120px;
+	width: 670px;
+	margin-top:10px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: helvetica;
+	/*cursor: pointer;*/
+	margin-bottom: 20px;
+}
+
+#entry {
+	height: 40px;
+	width: 400px;
+	font-size: 30px;
+	text-indent: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+	outline: none;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+button {
+	height: 45px;
+	width: 200px;
+	font-size: 28px;
+	text-align: center;
+	float: right;
+		border: 2px solid black;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+button:active {
+	background-color:black;
+	color:white;
+			border: 2px solid black;
+	border-radius: 5px;
+	outline: none;
+}
+
+button:focus {
+	outline:none;
+}
+
+#grocery h2 {
+	text-align: center;
+	margin-left: -12px;
+	margin-top: 22px;	
+	font-size: 25px;
+}
+
+
+
+
+/*ENTERED FOOD LIST*/
+
+.food {
+	position: relative;
+	background: white;
+	/*float: below;*/
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 40px;
+	width: 670px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	text-indent: 20px;
+	font-family: helvetica;
+	font-size: 25px;
+	cursor: pointer;
+	z-index: 200;
+}
+
+
+.delete {
+	display: none;
+}
+
+.strike {
+	font-weight: bolder;
+}
+
+#list .item ul li span {
+
+	font-color: white;
+	text-align: center;
+}
+
+.food .paid {
+	position: relative;
+	color: white;
+	margin-top: -30px;
+	/*background-repeat: no-repeat;*/
+	font-family: helvetica;
+	font-size: 45px;
+	cursor: pointer;
+	background-color: none;
+	height: 50px;
+	width: 10px;
+	margin-left: 190px;
+	z-index: 100;
+}
+
+
+.gone {
+	display: none;
+}
+
+
+
+
+.box {
+	position: relative;
+	background-color: #696969;
+	/* darker grays: #696969  #545454;*/
+		color: rgba(0,0,0,0.4);
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 0;
+}
+
+.cancel {
+	position: relative;
+	height:50px;
+	width: 50px;
+	opacity: 0.4;
+	/*position: relative;*/
+	background-image: url('BWcancel3.png');
+	background-repeat:no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -50px;
+	left: 120px;
+	z-index:300;
+	cursor: pointer;
+}
+
+.cancel:hover {
+	opacity: 0.8;
+}
+
+
+.aisle { 
+	position: relative;
+	/*background-color: blue;*/
+	height: 50px;
+	width: 51px;
+	background-image: url('foodpics/other333.png');
+	background-repeat:no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -50px;
+	left: 220px;
+	/*padding:left: 30px;*/
+	z-index:300;
+	cursor: pointer;
+}
+
+
+/*.aisle:hover {
+	opacity: 0.7;
+}*/
+
+
+.other {
+		background-image: url('foodpics/other333.png');
+		height: 50px;
+		width: 51px;
+		left: 220px;
+}
+
+
+.veg {
+		background-image: url('foodpics/fruitnveg.png');
+		height: 50px;
+		width: 90px;
+		left: 240px;
+}
+
+
+.fish {
+		background-image: url('foodpics/FISH2.png');
+		height: 50px;
+		width: 90px;
+		left: 225px;
+}
+
+
+.bread {
+		background-image: url('foodpics/bread2.png');
+		height: 52px;
+		width: 51px;
+		background-size: 50px 50px;
+		left: 225px;
+}
+
+
+.canned {
+		background-image: url('foodpics/cannedfood2.png');
+		height: 50px;
+		width: 53px;
+		left: 223px;
+}
+
+.frozen {
+		background-image: url('foodpics/Frozen2.png');
+		height: 50px;
+		width: 77px;
+		left: 220px;
+}
+
+
