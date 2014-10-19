@@ -69,38 +69,38 @@ var all = "<div class='food item'>eggs<div class='paid gone'>BOUGHT</div></div><
 
 		$('#list').on('click', '.other', function(event){
 				 event.preventDefault();
-				 alert("fruits and vegetables");
 				 $(this).addClass('veg').removeClass('other');
+				 alert("fruits and vegetables");
 		});
 
 		$('#list').on('click', '.veg', function(event){
 				event.preventDefault();
-				alert("meat and fish");
 				$(this).addClass('fish').removeClass('veg');
+				alert("meat and fish");
 		});
 
 		$('#list').on('click', '.fish', function(event){
 				event.preventDefault();
-				alert("bread and grain");
 				$(this).addClass('bread').removeClass('fish');
+				alert("bread and grain");
 		});
 
 		$('#list').on('click', '.bread', function(event){
 				event.preventDefault();
-				alert("canned goods");
 				$(this).addClass('canned').removeClass('bread');
+				alert("canned goods");
 		});
 
 		$('#list').on('click', '.canned', function(event){
 				event.preventDefault();
-				alert("frozen foods");
 				$(this).addClass('frozen').removeClass('canned')
+				alert("frozen foods");
 		});
 
 		$('#list').on('click', '.frozen', function(event){
 				event.preventDefault();
-				alert("other");
 				$(this).addClass('other').removeClass('frozen');
+				alert("other");
         });
 
 
