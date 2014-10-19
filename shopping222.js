@@ -2,13 +2,16 @@ $(document).ready(function(){
 alert("click on pictures to categorize by food aisle")
 
 //TOGGLE BOUGHT STATUS
-	$('.food').on('click', function(){$(this).toggleClass('box');});
-	$('.item').on('click', function(){$(this).find('.paid').toggleClass('gone');});
 
-//REMOVE FOOD AND CANCEL DIVS
-	$('.cancel').on('click', function(){$(this).next('.aisle').remove();
-				$(this).prev('.food').remove();
-						$(this).remove();});
+	$('.food').on('click',function(event){event.preventDefault();
+		  event.stopPropagation();
+		$(this).toggleClass('box');});
+
+	$('.item').on('click',function(event){event.preventDefault();	
+		  event.stopPropagation();
+		$(this).find('.paid').toggleClass('gone');});
+
+
 
 
 
@@ -19,6 +22,7 @@ alert("click on pictures to categorize by food aisle")
 			$('#add').click();
 		};
 	});	
+
 
 //variables used in add list items section
 var first = "<div class='food item'></div>"
@@ -33,6 +37,7 @@ var all = "<div class='food item'>eggs<div class='paid gone'>BOUGHT</div></div><
 		var txtbox = document.getElementById('entry');
 		var txtval = txtbox.value;
 		event.preventDefault();
+				  event.stopPropagation();
 
 		if(!$.trim($('#entry').val())) {
 			alert('Please enter text to add to the list');
@@ -41,34 +46,36 @@ var all = "<div class='food item'>eggs<div class='paid gone'>BOUGHT</div></div><
 
 		document.getElementById('entry').value = '';	
 		event.preventDefault();
+				  event.stopPropagation();
 	};
 
-
-	//TOGGLE BOUGHT STATUS --- APPLY TO NEW LIST ITEM
-
-	$('.food').on('click', function(event){
-				event.preventDefault();
-				$(this).toggleClass('box');});
-	$('.item').on('click', function(event){
-				event.preventDefault();
-				$(this).find('.paid').toggleClass('gone');});
+	$('.food').off('click');
+		$('.item').off('click');
+	$('.cancel').off('click');
 
 
+		//TOGGLE BOUGHT STATUS --- APPLY TO NEW LIST ITEMS
 
+	$('.food').on('click',function(event){//event.preventDefault();
+		  event.stopPropagation();
+	//	$('.food2').on('click', function(event){event.preventDefault();
+		$(this).toggleClass('box');});
 
-//	$('.food').on('click', function(){$(this).toggleClass('box');});
-//	$('.item').on('click', function(){$(this).find('.paid').toggleClass('gone');});
+	$('.item').on('click',function(event){//event.preventDefault();	
+		  event.stopPropagation();
+	//$('.item2').on('click', function(event){event.preventDefault();
+	$(this).find('.paid').toggleClass('gone');});
+
 
 	//REMOVE FOOD AND CANCEL DIVS --- APPLY TO NEW LIST ITEM
-	$('.cancel').on('click', function(){$(this).prev('.food').remove();
-						$(this).next('.aisle').remove();
-						$(this).remove()});
+	$('.cancel').on('click', function(event){
+				event.preventDefault();
+				$(this).prev('.food').remove();
+					$(this).next('.aisle').remove();
+						$(this).remove();});
 
 
-
-	}); //add list items - END BRACES
-
-
+}); //add list items - END BRACES
 
 
 

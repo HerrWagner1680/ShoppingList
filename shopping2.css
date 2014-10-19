@@ -105,6 +105,25 @@ button:focus {
 	z-index: 200;
 }
 
+.food2 {
+	position: relative;
+	background: white;
+	/*float: below;*/
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 40px;
+	width: 670px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	text-indent: 20px;
+	font-family: helvetica;
+	font-size: 25px;
+	cursor: pointer;
+	z-index: 200;
+}
+
 
 .delete {
 	display: none;
@@ -120,7 +139,30 @@ button:focus {
 	text-align: center;
 }
 
+#list .item2 ul li span {
+
+	font-color: white;
+	text-align: center;
+}
+
+
+
 .food .paid {
+	position: relative;
+	color: white;
+	margin-top: -30px;
+	/*background-repeat: no-repeat;*/
+	font-family: helvetica;
+	font-size: 45px;
+	cursor: pointer;
+	background-color: none;
+	height: 50px;
+	width: 10px;
+	margin-left: 190px;
+	z-index: 100;
+}
+
+.food2 .paid {
 	position: relative;
 	color: white;
 	margin-top: -30px;
