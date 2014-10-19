@@ -6,8 +6,9 @@ alert("click on pictures to categorize by food aisle")
 	$('.item').on('click', function(){$(this).find('.paid').toggleClass('gone');});
 
 //REMOVE FOOD AND CANCEL DIVS
-	$('.cancel').on('click', function(){$(this).prev('.food').remove();
-						$(this).remove()});
+	$('.cancel').on('click', function(){$(this).next('.aisle').remove();
+				$(this).prev('.food').remove();
+						$(this).remove();});
 
 
 
@@ -37,6 +38,7 @@ var all = "<div class='food item'>eggs<div class='paid gone'>BOUGHT</div></div><
 			alert('Please enter text to add to the list');
 		} else {
 			$(first).appendTo('#list').html(txtval + second).after(third + fourth);
+			//$(fifth).appendTo('fourth');
 
 		document.getElementById('entry').value = '';
 
@@ -53,8 +55,7 @@ var all = "<div class='food item'>eggs<div class='paid gone'>BOUGHT</div></div><
 	$('.cancel').on('click', function(){$(this).prev('.food').remove();
 						$(this).next('.aisle').remove();
 						$(this).remove()});
-	//$('.cancel').on('click', function(){$(this).next('.aisle').remove();
-	//					$(this).remove()});
+
 
 
 	}); //add list items - END BRACES
@@ -66,34 +67,38 @@ var all = "<div class='food item'>eggs<div class='paid gone'>BOUGHT</div></div><
 
 // AISLE / FOOD PIC cycle through categories
 
-	//$( '.aisle' ).bind('click',function() {
+		$('#list').on('click', '.other', function(event){
+				 event.preventDefault();
+				 alert("fruits and vegetables");
+				 $(this).addClass('veg').removeClass('other');
+		});
 
-  	 	$('.other').on('click', function(){ 
-  				alert("fruits and vegetables");
-	 	 		$(this).addClass('veg').removeClass('other');
- 		});
-
-		$('.veg').on('click', function(){
+		$('#list').on('click', '.veg', function(event){
+				event.preventDefault();
 				alert("meat and fish");
 				$(this).addClass('fish').removeClass('veg');
 		});
 
-		$('.fish').on('click', function(){
+		$('#list').on('click', '.fish', function(event){
+				event.preventDefault();
 				alert("bread and grain");
-				$('.fish').addClass('bread').removeClass('fish');
+				$(this).addClass('bread').removeClass('fish');
 		});
 
-		$('.bread').on('click', function(){
+		$('#list').on('click', '.bread', function(event){
+				event.preventDefault();
 				alert("canned goods");
 				$(this).addClass('canned').removeClass('bread');
 		});
 
-		$('.canned').on('click', function(){
+		$('#list').on('click', '.canned', function(event){
+				event.preventDefault();
 				alert("frozen foods");
 				$(this).addClass('frozen').removeClass('canned')
 		});
 
-		$('.frozen').on('click', function(){
+		$('#list').on('click', '.frozen', function(event){
+				event.preventDefault();
 				alert("other");
 				$(this).addClass('other').removeClass('frozen');
         });
