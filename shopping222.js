@@ -38,18 +38,26 @@ var all = "<div class='food item'>eggs<div class='paid gone'>BOUGHT</div></div><
 			alert('Please enter text to add to the list');
 		} else {
 			$(first).appendTo('#list').html(txtval + second).after(third + fourth);
-			//$(fifth).appendTo('fourth');
 
-		document.getElementById('entry').value = '';
-
-		
+		document.getElementById('entry').value = '';	
 		event.preventDefault();
 	};
 
 
 	//TOGGLE BOUGHT STATUS --- APPLY TO NEW LIST ITEM
-	$('.food').on('click', function(){$(this).toggleClass('box');});
-	$('.item').on('click', function(){$(this).find('.paid').toggleClass('gone');});
+
+	$('.food').on('click', function(event){
+				event.preventDefault();
+				$(this).toggleClass('box');});
+	$('.item').on('click', function(event){
+				event.preventDefault();
+				$(this).find('.paid').toggleClass('gone');});
+
+
+
+
+//	$('.food').on('click', function(){$(this).toggleClass('box');});
+//	$('.item').on('click', function(){$(this).find('.paid').toggleClass('gone');});
 
 	//REMOVE FOOD AND CANCEL DIVS --- APPLY TO NEW LIST ITEM
 	$('.cancel').on('click', function(){$(this).prev('.food').remove();
